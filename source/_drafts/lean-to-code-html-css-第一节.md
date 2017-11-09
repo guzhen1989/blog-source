@@ -39,7 +39,32 @@ categories:
 ### 标签（Tags）
 &ensp;&ensp;&ensp;&ensp;围绕元素的小于和大于尖括号的使用创建了所谓的标签。标签通常以成对的开启和关闭标签出现。
 
-## Setting Up the HTML Document Structure
+&ensp;&ensp;&ensp;&ensp;<i>开始标记</i>标记元素的开始。它由一个小于号的后面跟一个元素的名字组成，然后以一个大于号结束;例如<code>&lt;div&gt;</code>。
+
+&ensp;&ensp;&ensp;&ensp;<i>结束标记</i>标记元素的结束。它由一个小于号的后面跟一个正斜杠和元素的名字组成，然后以大于号结束;例如<code>&lt;/div&gt;</code>。
+
+&ensp;&ensp;&ensp;&ensp;在开始和结束标签之间的内容是该元素的内容。例如，锚链接将具有开始标记<code>&lt;a&gt;</code>的开始标记和结束标记<code>&lt;/a&gt;</code>。两个标签之间的内容就是锚链接的内容。
+
+&ensp;&ensp;&ensp;&ensp;所以，锚链接标签看起来有点像这样：
+```html
+<a>...</a>
+```
+
+### 属性（Attributes）
+&ensp;&ensp;&ensp;&ensp;<i>属性</i>是用来提供关于元素的附加信息的。 最常见的属性包括标识元素的<code>id</code>属性; 分类元素的<code>class</code>属性; 指定可嵌入内容的来源的<code>src</code>属性和提供链接资源的<code>href</code>属性。
+
+&ensp;&ensp;&ensp;&ensp;属性是在开始标签的元素名称后面定义的。一般来说，属性包括名称和值。这些属性的格式由属性名称，后跟等号和引用的属性值组成。例如，包含<code>href</code>属性的<code>&lt;a&gt;</code>元素看起来如下所示：
+```html
+<a href="http://shayhowe.com/">Shay Howe</a>
+```
+<iframe width="100%" height="100" src="//jsfiddle.net/1132053388/ze8L0779/embedded/html,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+&ensp;&ensp;&ensp;&ensp;前面的代码将在网页上显示文字“Shay Howe”，并在用户点击“Shay Howe”文字时将用户带到http://shayhowe.com/。 锚元素使用开始标签<code>&lt;a&gt;</code>和闭合标签<code>&lt;/a&gt;</code>包裹文本，而超链接引用的属性和值在开始标签中用<code>href ="http://shayhowe.com"</code>声明。
+![](html-syntax-outline.png)
+
+&ensp;&ensp;&ensp;&ensp;现在您已经知道了HTML元素，标签和属性了，我们来组装我们的第一个网页吧。如果这里有什么新东西的话，不用担心，我们会在我们使用的时候解释它。
+
+## 配置HTML文档结构
+&ensp;&ensp;&ensp;&ensp;HTML文档是以<code>.html</code>文件扩展名而不是<code>.txt</code>文件扩展名保存的纯文本文档。 要开始编写HTML，您首先需要一个您使用的纯文本编辑器。 可悲的是，这不包括Microsoft Word或Pages，因为那些是富文本编辑器。 两种用于编写HTML和CSS的更流行的纯文本编辑器是Dreamweaver和Sublime Text。 免费的替代品还包括用于Windows的Notepad ++和用于Mac的TextWrangler。
 ## 练习
 # CSS
 ## 了解常见的CSS术语
