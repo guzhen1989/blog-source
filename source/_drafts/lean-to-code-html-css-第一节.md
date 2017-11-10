@@ -64,7 +64,47 @@ categories:
 &ensp;&ensp;&ensp;&ensp;现在您已经知道了HTML元素，标签和属性了，我们来组装我们的第一个网页吧。如果这里有什么新东西的话，不用担心，我们会在我们使用的时候解释它。
 
 ## 配置HTML文档结构
-&ensp;&ensp;&ensp;&ensp;HTML文档是以<code>.html</code>文件扩展名而不是<code>.txt</code>文件扩展名保存的纯文本文档。 要开始编写HTML，您首先需要一个您使用的纯文本编辑器。 可悲的是，这不包括Microsoft Word或Pages，因为那些是富文本编辑器。 两种用于编写HTML和CSS的更流行的纯文本编辑器是Dreamweaver和Sublime Text。 免费的替代品还包括用于Windows的Notepad ++和用于Mac的TextWrangler。
+&ensp;&ensp;&ensp;&ensp;HTML文档是以<code>.html</code>文件扩展名而不是<code>.txt</code>文件扩展名保存的纯文本文档。 要开始编写HTML，您首先需要一个您习惯使用的纯文本编辑器。 但是，这不包括Microsoft Word或Pages，因为那些是富文本编辑器。 两种更流行的用于编写HTML和CSS的纯文本编辑器是Dreamweaver和Sublime Text。 免费的替代品还包括用于Windows的Notepad ++和用于Mac的TextWrangler。
+
+&ensp;&ensp;&ensp;&ensp;所有HTML文档都必需具有必需以下的声明和元素：<code>&lt;!DOCTYPE html&gt;</code>，<code>&lt;html&gt;</code>，<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>。
+
+&ensp;&ensp;&ensp;&ensp;文档类型声明或<code>&lt;!DOCTYPE html&gt;</code>通知Web浏览器正在使用哪个版本的HTML，并放置在HTML文档的开头。因为我们将使用最新版本的HTML，所以我们的文档类型声明就是<code>&lt;!DOCTYPE html&gt;</code>。在文档类型声明之后，<code>&lt;html&gt;</code>元素表示文档的开始。
+
+&ensp;&ensp;&ensp;&ensp;在<code>&lt;!DOCTYPE html&gt;</code>元素中，<code>&lt;head&gt;</code>元素标识文档的顶部，里面包括任意元数据（关于页面的附带信息）。<code>&lt;head&gt;</code>元素内的内容不会显示在网页上。相反，它可能包含文档标题（显示在浏览器窗口中的标题栏上），或者指向任何外部文件的链接或任何其他有用的元数据。
+
+&ensp;&ensp;&ensp;&ensp;网页中的所有可见内容都将落入<body>元素中。典型的HTML文档结构看起来像这样：
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello World</title>
+  </head>
+  <body>
+    <h1>Hello World</h1>
+    <p>This is a web page.</p>
+  </body>
+</html>
+```
+<iframe width="100%" height="300" src="//jsfiddle.net/1132053388/ad1tu54L/embedded/html,css,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+&ensp;&ensp;&ensp;&ensp;上面的代码显示了以文档类型声明开始的文档<code>&lt;<!DOCTYPE html&gt;</code>，紧接着是<code>&lt;html&gt;</code>元素。 在<code>&lt;html&gt;</code>元素里面有<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素。 <code>&lt;head&gt;</code>元素通过<code>&lt;meta charset =“utf-8”&gt;</code>标签申明页面的字符编码，并通过<code>&lt;title&gt;</code>元素申明文档的标题。 <code>&lt;body&gt;</code>元素通过<code>&lt;h1&gt;</code>元素和<code>&lt;p&gt;</code>元素包含一个标题和段落。 因为标题和段落嵌套在<code>&lt;body&gt;</code>元素中，所以它们在网页上是可见的。
+
+&ensp;&ensp;&ensp;&ensp;当一个元素被放置在另一个元素的内部时，也被称为嵌套元素，缩进该元素以保持文档结构组织的清晰是一个好主意。 在前面的代码中，<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素嵌套在<code>&lt;html&gt;</code>元素中并缩进。 在<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素中添加新元素时，新嵌套元素也将缩进。
+
+> <big>自闭元素</big>
+&ensp;&ensp;&ensp;&ensp;在前面的例子中，<code>&lt;meta&gt;</code>元素只有一个标签，没有包含结束标签。 不要害怕，这是故意的。 并非所有元素都包含开始和结束标记。 一些元素只是从一个标签内的属性接收他们的内容或行为。 <code>&lt;meta&gt;</code>元素是这些元素之一。 上面的<code>&lt;meta&gt;</code>元素使用charset属性和值进行控制。 其他常见的自闭元素包括:
+- <code>&lt;br&gt;</code>
+- <code>&lt;embed&gt;</code>
+- <code>&lt;hr&gt;</code>
+- <code>&lt;img&gt;</code>
+- <code>&lt;input&gt;</code>
+- <code>&lt;link&gt;</code>
+- <code>&lt;meta&gt;</code>
+- <code>&lt;param&gt;</code>
+- <code>&lt;source&gt;</code>
+- <code>&lt;wbr&gt;</code>
+
+&ensp;&ensp;&ensp;&ensp;使用<!DOCTYPE html>文档类型和<html>，<head>和<body>元素描述的结构相当常见。我们希望保持这个文档结构的方便，因为我们会在创建新的HTML文档时经常使用它。
 ## 练习
 # CSS
 ## 了解常见的CSS术语
