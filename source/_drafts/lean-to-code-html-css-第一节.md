@@ -87,7 +87,7 @@ categories:
 </html>
 ```
 <iframe width="100%" height="300" src="//jsfiddle.net/1132053388/ad1tu54L/embedded/html,css,result/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-&ensp;&ensp;&ensp;&ensp;上面的代码显示了以文档类型声明开始的文档<code>&lt;<!DOCTYPE html&gt;</code>，紧接着是<code>&lt;html&gt;</code>元素。 在<code>&lt;html&gt;</code>元素里面有<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素。 <code>&lt;head&gt;</code>元素通过<code>&lt;meta charset =“utf-8”&gt;</code>标签申明页面的字符编码，并通过<code>&lt;title&gt;</code>元素申明文档的标题。 <code>&lt;body&gt;</code>元素通过<code>&lt;h1&gt;</code>元素和<code>&lt;p&gt;</code>元素包含一个标题和段落。 因为标题和段落嵌套在<code>&lt;body&gt;</code>元素中，所以它们在网页上是可见的。
+&ensp;&ensp;&ensp;&ensp;上面的代码显示了以文档类型声明开始的文档<code>&lt;!DOCTYPE html&gt;</code>，紧接着是<code>&lt;html&gt;</code>元素。 在<code>&lt;html&gt;</code>元素里面有<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素。 <code>&lt;head&gt;</code>元素通过<code>&lt;meta charset =“utf-8”&gt;</code>标签申明页面的字符编码，并通过<code>&lt;title&gt;</code>元素申明文档的标题。 <code>&lt;body&gt;</code>元素通过<code>&lt;h1&gt;</code>元素和<code>&lt;p&gt;</code>元素包含一个标题和段落。 因为标题和段落嵌套在<code>&lt;body&gt;</code>元素中，所以它们在网页上是可见的。
 
 &ensp;&ensp;&ensp;&ensp;当一个元素被放置在另一个元素的内部时，也被称为嵌套元素，缩进该元素以保持文档结构组织的清晰是一个好主意。 在前面的代码中，<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素嵌套在<code>&lt;html&gt;</code>元素中并缩进。 在<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素中添加新元素时，新嵌套元素也将缩进。
 
@@ -104,8 +104,46 @@ categories:
 - <code>&lt;source&gt;</code>
 - <code>&lt;wbr&gt;</code>
 
-&ensp;&ensp;&ensp;&ensp;使用<!DOCTYPE html>文档类型和<html>，<head>和<body>元素描述的结构相当常见。我们希望保持这个文档结构的方便，因为我们会在创建新的HTML文档时经常使用它。
+&ensp;&ensp;&ensp;&ensp;这里使用的<code>&lt;!DOCTYPE html&gt;</code>文档类型和<code>&lt;html&gt;</code>，<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素的结构相当常见。我们将保存这个文档结构，因为我们会在创建新的HTML文档时经常使用它。
+
+><big>代码检查</big>
+&ensp;&ensp;&ensp;&ensp;无论我们在写代码的时候多么小心，我们都会不可避免地犯错误。 谢天谢地，在编写HTML和CSS时，我们有校验器来检查我们的工作。 W3C已经构建了扫描HTML和CSS代码中错误的校验器。 校验我们的代码不仅可以使代码在所有浏览器中正确呈现，还可以教会我们编写代码的最佳实践。
+
 ## 练习
+&ensp;&ensp;&ensp;&ensp;作为网页设计师和前端开发人员，我们有幸参加了一些专门针对我们的工作的大型会议。我们将组织自己的会议（Styles Conference），并在下面的课程中为它建立一个网站。开始了！
+
+1. 让我们打开我们的文本编辑器，创建一个名为index.html的新文件，并将其保存到一个我们不会忘记的位置。我将在我的桌面上创建一个名为“styles-conference”的文件夹，并将其保存在此处;大家可以一样处理。
+2. 在index.html文件中，我们来添加文档结构，包括<code>&lt;!DOCTYPE html&gt;</code>文档类型和<code>&lt;html&gt;</code>，<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>元素。
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  </head>
+  <body>
+  </body>
+</html>
+```
+3. 在<code>&lt;head&gt;</code>元素中，添加<code>&lt;meta&gt;</code>和<code>&lt;title&gt;</code>元素。 <code>&lt;meta&gt;</code>元素应该包含正确的charset(编码)属性和值，而<code>&lt;title&gt;</code>元素应该包含页面的标题——“Styles Conference”。
+```html
+<head>
+  <meta charset="utf-8">
+  <title>Styles Conference</title>
+</head>
+```
+4. 在<code>&lt;body&gt;</code>元素中，添加<code>&lt;h1&gt;</code>和<code>&lt;p&gt;</code>元素。 <code>&lt;h1&gt;</code>元素应包含我们希望包含的标题——让我们再次使用“Styles Conference”，而<code>&lt;p&gt;</code>元素应包含一个简单的段落来介绍我们的会议。
+```html
+<body>
+  <h1>Styles Conference</h1>
+  <p>Every year the brightest web designers and front-end developers descend on Chicago to discuss the latest technologies. Join us this August!</p>
+</body>
+```
+5. 现在是时候看看我们已经完成了的页面！让我们去找到我们的index.html文件（我的在桌面上的“styles-conference”文件夹中）。双击此文件或将其拖入Web浏览器来打开查看。
+![](lesson_1.png)
+
+&ensp;&ensp;&ensp;&ensp;让我们切换一下，不管HTML，先看看CSS。请记住，HTML将定义我们网页的内容和结构，而CSS将定义我们网页的视觉风格和外观。
 # CSS
 ## 了解常见的CSS术语
+&ensp;&ensp;&ensp;&ensp;除HTML术语外，还有一些常用的CSS[术语](http://www.impressivewebs.com/css-terms-definitions/)，您可能需要自己熟悉这些术语。这些术语包括选择器，属性和值。与HTML术语一样，使用CSS越多，你将会越来越熟悉它们。
 
+### 选择器（Selectors）
+&ensp;&ensp;&ensp;&ensp;当元素被添加到网页中时，可以使用CSS对其进行样式化。选择器指定我们的HTML中的哪个或哪些元素来定位和应用样式（如颜色，大小和位置）。选择器可以包含不同限定符的组合，以选择独特的元素，全部取决于我们希望如何具体。
