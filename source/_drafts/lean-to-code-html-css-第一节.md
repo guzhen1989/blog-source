@@ -146,4 +146,65 @@ categories:
 &ensp;&ensp;&ensp;&ensp;除HTML术语外，还有一些常用的CSS[术语](http://www.impressivewebs.com/css-terms-definitions/)，您可能需要自己熟悉这些术语。这些术语包括选择器，属性和值。与HTML术语一样，使用CSS越多，你将会越来越熟悉它们。
 
 ### 选择器（Selectors）
-&ensp;&ensp;&ensp;&ensp;当元素被添加到网页中时，可以使用CSS对其进行样式化。选择器指定我们的HTML中的哪个或哪些元素来定位和应用样式（如颜色，大小和位置）。选择器可以包含不同限定符的组合，以选择独特的元素，全部取决于我们希望如何具体。
+&ensp;&ensp;&ensp;&ensp;当元素被添加到网页中时，可以使用CSS对其进行样式化。选择器指定我们的HTML中的哪个或哪些元素来应用样式（如颜色，大小和位置）。选择器可以包含不同限定符的组合，取决于我们的目的来选择独特的元素。例如，我们可能希望选择页面上的每个段落，或者我们可能只想在页面上选择一个特定的段落。
+
+&ensp;&ensp;&ensp;&ensp;选择器通常以属性值为目标，如<code>id</code>或<code>class</code>值，或者定位元素的类型，如<code>&lt;h1&gt;</code>或<code>&lt;p&gt;</code>。
+
+&ensp;&ensp;&ensp;&ensp;在CSS中，选择器后面跟随大括号{}，其中包含要应用于所选元素的样式。下面的选择器是针对所有的<code>&lt;p&gt;</code>元素。
+```css
+p {...}
+```
+
+### 属性（Properties）
+&ensp;&ensp;&ensp;&ensp;一旦选择了一个元素，属性决定了将应用于该元素的样式。属性名称落在选择器之后的大括号{}内，且在冒号:之前。我们可以使用许多属性，例如<code>background</code>,<code>color</code>,<code>font-size</code>,<code>height</code>和<code>width</code>。在下面的代码中，我们定义了要应用于所有<code>&lt;p&gt;</code>元素的颜色和字体大小属性。
+```css
+p {
+  color: ...;
+  font-size: ...;
+}
+```
+
+### 值（Values）
+&ensp;&ensp;&ensp;&ensp;到目前为止，我们已经使用选择器选择了一个元素，并确定了我们想要使用样式的属性。现在我们可以用一个值来确定这个属性的行为。值可以被识别为冒号:和分号;之间的文本。在这里，我们选择所有的<code>&lt;p&gt;</code>元素，并将<code>color</code>属性的值设置为<code>orange</code>，并将font-size属性的值设置为<code>16</code>像素。
+```css
+p {
+  color: orange;
+  font-size: 16px;
+}
+```
+
+&ensp;&ensp;&ensp;&ensp;在CSS中，规则集是以选择器开始的，紧接着是花括号。在这些大括号内是由属性和值对组成的。每个属性值对都从一个属性开始，后面是一个冒号和属性值，最后是一个分号。
+
+&ensp;&ensp;&ensp;&ensp;在大括号内缩进属性和值对是一种常见的做法。与HTML一样，这些缩进有助于我们的代码的组织保持清晰。
+![](css-syntax-outline.png)
+
+&ensp;&ensp;&ensp;&ensp;了解一些常用术语和CSS的一般语法是一个很好的开始，但是在深入了解之前我们还有其他一些东西需要学习。具体来说，我们需要仔细看看选择器在CSS中如何工作的。
+
+## 使用选择器
+### 类型选择器（Type Selectors）
+&ensp;&ensp;&ensp;&ensp;类型选择器按元素类型定位元素。例如，如果我们想要定位所有的<code>&lt;div&gt;</code>元素，我们将使用div的类型选择器。以下代码显示了<code>div</code>元素的类型选择器以及它选择的相应HTML。
+```css
+div { ... }
+```
+```html
+<div>...</div>          
+<div>...</div>
+```
+
+### 类选择器（Class Selectors）
+&ensp;&ensp;&ensp;&ensp;类选择器允许我们根据元素的类属性值选择一个元素。类选择器比类型选择器更具体一些，因为它们选择一组特定的元素而不是一种类型的所有元素。
+
+&ensp;&ensp;&ensp;&ensp;类选择器允许我们通过在多个元素中使用相同的类属性值，将同样的样式同时应用于不同的元素。
+
+&ensp;&ensp;&ensp;&ensp;在CSS中，类用前导点<code>.</code>表示，后跟类属性值。在这里，类选择器将选择包含awesome类属性值的任何元素，包括<code>div</code>元素和<code>p</code>元素。
+```css
+.awesome { ... }
+```
+```html
+<div class="awesome">...</div>
+<p class="awesome">...</p>
+```
+
+### ID选择器（ID Selectors）
+&ensp;&ensp;&ensp;&ensp;
+
