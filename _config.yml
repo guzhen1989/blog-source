@@ -79,6 +79,6 @@ theme: one
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/guzhen1989/guzhen1989.github.io.git
+  repo: git@github.com:guzhen1989/guzhen1989.github.io.git
   branch: master
   message: 部署
